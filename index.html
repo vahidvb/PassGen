@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <title>PassGen</title>
+    <meta name="title" content="PassGen">
+    <meta name="description" content="online strong random password generator">
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+    <div class="scroll-height">
+        <header class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="head-text"><span>Pass</span><span>Gen</span></div>
+                </div>
+            </div>
+        </header>
+        <div class="container create-wrapper">
+            <input id="generated-pass" class="create-textbox">
+            <div class="my-social-network">
+                <div class="social-network-item"><a target="_blank" id="tgicon" href=""><i
+                            title="اشتراک گذاری در تلگرام" class="fab fa-telegram-plane"></i></a>
+                </div>
+                <div class="social-network-item"><a target="_blank" id="waicon" href=""><i
+                            title="اشتراک گذاری در واتس اپ" class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="social-network-item"><a id="copy" onclick="copyFunction()"><i title="کپی در کلیپبورد"
+                            class="far fa-copy"></i></a>
+                </div>
+            </div>
+            <button id=generate class=create-btn>Generate</button>
+        </div>
+        <div class=clear-fix></div>
+        <div class="container nopadding">
+            <div id="setting" class="setting row">
+                <div class="show-setting-button" isopen="false">
+                    <i class="fas fa-arrow-alt-circle-up"></i>
+                    Settings
+                </div>
+                <div class="setting-items-wrapper" style="display: none;">
+                    <div class="length-wrapper">
+                        <i class="fas fa-text-width"></i>
+                        <select class="length">
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="32">32</option>
+                            <option value="64">64</option>
+                            <option value="128">128</option>
+                            <option value="256">256</option>
+                        </select>
+                    </div>
+                    <div class="setting-item noselect" id="AlphaLower" ischeck="true">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Lowercase (abcdefghi....)
+                    </div>
+                    <div class="setting-item noselect" id="AlphaUpper" ischeck="true">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Uppercase (ABCDEFGHI....)
+                    </div>
+                    <div class="setting-item noselect" id="Num" ischeck="true">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Numbers (12345....)
+                    </div>
+                    <div class="setting-item noselect" id="HypenDashUnderscore" ischeck="false">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Dash, Underline (-_)
+                    </div>
+                    <div class="setting-item noselect" id="Special" ischeck="false">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Characters (~!@#$%^&*()=+[]{};:,.<>/?)
+                    </div>
+                    <div class="setting-item noselect" id="Ambiguous" ischeck="false">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Ambiguous (iolIO01)
+                    </div>
+                    <div class="setting-item noselect" id="Persian" ischeck="false">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        Persian (آابپتثجچ‌....)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
