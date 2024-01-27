@@ -53,10 +53,6 @@ jQuery.generateRandomPassword = function(length, useLowerCase, useUpperCase, use
     return password;
 };
 
-$("form").on("submit", function(event) {
-    event.preventDefault();
-});
-
 $(function() {
     $("#generate").click(function(event) {
         var generatedPassword = $.generateRandomPassword(
@@ -85,8 +81,4 @@ $(".checkboxlist").on("click", "input:checkbox", function() {
 
 $("#alphalower_chars_checkbox").click(function() {
     $(this).addClass("active").siblings().removeClass("active");
-});
-
-$(window).scroll(function() {
-    $(window).scrollTop() > 200 ? $(".btn-up").show() : $(".btn-up").hide();
 });
